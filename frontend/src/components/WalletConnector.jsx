@@ -37,8 +37,8 @@ export default function WalletConnector() {
 
     async function connectHashPack() {
         try {
+            const appMetadata = { name: 'Undertaker DApp', description: 'Swap Demo', icon: '/logo.svg' }
             const hashconnect = new HashConnect(LedgerId.TESTNET, "HTS-EVM01", appMetadata, true)
-            const appMetadata = { name: 'Undertaker DApp', description: 'Swap Demo', icon: '' }
             // setUpHashConnectEvents();
             const initData = await hashconnect.init()
             const state = await hashconnect.connect() // shows pairing QR etc

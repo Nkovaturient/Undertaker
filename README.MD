@@ -98,7 +98,16 @@ ONCHAIN EXECUTION COMPLETE & SUCCESSFUL...
 
 - Chatgpt-5 Pro : README Generation, `PriceAwareRouter.t.sol` test suite
 
-## Flowchart
+## Smart Contract Breakdown
+
+- The **Undretaker PriceAwareRouter** demonstrates:
+
+* Real-time **oracle price feeds** on Hedera EVM.
+* Secure **HTS native token transfers** through system contracts.
+* Transparent **event logging** for verifiability.
+* **Cross-ecosystem integration** (Ethereum tools + Hedera services).
+
+Look at the /docs/setup.md for a detailed guide.
 
 
 

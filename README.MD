@@ -14,7 +14,9 @@
 - Built/tested with Foundry (Solidity tests + forge scripts) and verified on HashScan (Hedera’s verification flow that judges want to see).
 
 ## Arch
-- PriceOracleAdapter (Chainlink feeds)
+- PriceAwareRouter Contract Addr - 0x5d9EB54Cd25CCF09dFC1796628776d2ee003a5fC
+- Verified on (Hashscan Testnet)[https://hashscan.io/testnet/contract/0.0.6917415]
+
 
 ## Quick start (Foundry)
 
@@ -53,6 +55,27 @@ forge script script/Deploy.s.sol \
   --broadcast \
   --legacy \
   --private-key $PRIVATE_KEY
+```
+
+```
+[⠊] Compiling...
+[⠘] Compiling 17 files with Solc 0.8.20
+[⠊] Solc 0.8.20 finished in 4.93s
+
+##### 296
+✅  [Success] Hash: 0x633583c1bfcf294dd6496edf9fc606ba3d63c02117dd4f6c4cd0ba67fb51dc30
+Contract Address: 0x5d9EB54Cd25CCF09dFC1796628776d2ee003a5fC
+Block: 25488518
+Paid: 0.5541484 ETH (1385371 gas * 400 gwei)
+
+✅ Sequence #1 on 296 | Total Paid: 0.5541484 ETH (1385371 gas * avg 400 gwei)
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL...
+
+
 ```
 
 6. Verify on HashScan

@@ -16,6 +16,7 @@
     "clsx": "^2.1.1",
     "ethers": "^6.15.0",
     "hashconnect": "^3.0.13",
+    "qrcode.react": "^4.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.13"

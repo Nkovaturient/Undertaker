@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ethers } from 'ethers'
-import { useWallet } from '../context/walletContext'
+import { useWallet } from '../context/WalletContext'
 import { findPaths } from '../utils/pathFinder'
 import { PRICE_AWARE_ROUTER_ABI } from '../utils/abi'
 

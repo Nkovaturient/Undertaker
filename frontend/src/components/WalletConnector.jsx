@@ -207,7 +207,7 @@ export default function WalletConnector() {
       await hc.init()
       const ps = await hc.pairingString;
       setPairingStr(ps);
-      console.log("Pairing string:", ps);
+    //   console.log("Pairing string:", ps);
     } catch (e) {
       console.error(e)
       alert('HashPack connect failed: ' + e.message)

@@ -1,79 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
 @import "tailwindcss";
 
 @tailwind base;
 @tailwind utilities;
 
+/* ----------------------------------------
+   GLOBAL STYLES
+----------------------------------------- */
+html, body, #root {
+  height: 100%;
+}
 
-html, body, #root { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Hedera dark gradient */
+  color: #f1f1f1; /* full white text for contrast */
+  transition: background 0.5s ease-in-out;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+#root {
+  animation: fadeIn 0.8s ease-in-out;
+}
 
-/* small cosmetic */
-body { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial }
-
-
-/* Hedera-themed accents */
+/* ----------------------------------------
+   HEDERA THEME COLORS
+----------------------------------------- */
 .border-hedera { border-color: #18b48f }
 .bg-hedera-50 { background-color: #e8f7f3 }
 .bg-hedera-100 { background-color: #c9efe6 }
 .bg-hedera-500 { background-color: #18b48f }
+.bg-hedera-600 { background-color: #12856a }
+.text-hedera-700 { color: #0c5c49 }
 
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+/* ----------------------------------------
+   TYPOGRAPHY
+----------------------------------------- */
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #18b48f, #1fd9c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 { font-size: 2rem; color: #041b5a; }
+p, span, div {
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Links */
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #18b48f;
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: #1fd9c2;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* ----------------------------------------
+   INPUTS & FORMS
+----------------------------------------- */
+input, select, textarea {
+  background: #ffffff;
+  color: #213547;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.6em 0.8em;
+  font-size: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #18b48f;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24,180,143,0.3);
 }
 
+/* Placeholder text */
+::placeholder {
+  color: #6b7280; /* slate gray */
+  opacity: 1;
+}
+
+/* ----------------------------------------
+   BUTTONS
+----------------------------------------- */
 button {
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1.4em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #18b48f;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease-in-out;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #12856a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(24,180,143,0.6);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:active {
+  transform: translateY(0);
 }
 
+/* Special glowing CTA */
+.btn-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* ----------------------------------------
+   ANIMATIONS
+----------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(24,180,143,0.4); }
+  50% { box-shadow: 0 0 18px rgba(24,180,143,0.9); }
+}
+
+/* ----------------------------------------
+   LIGHT MODE OVERRIDES
+----------------------------------------- */
 @media (prefers-color-scheme: light) {
-  :root {
+  body {
+    background: #f9f9f9;
     color: #213547;
-    background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+  h1 {
+    -webkit-text-fill-color: unset;
+    background: unset;
+    color: #18b48f;
+  }
+  input, select, textarea {
+    background: #ffffff;
+    color: #213547;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #18b48f;
+    color: #ffffff;
   }
 }

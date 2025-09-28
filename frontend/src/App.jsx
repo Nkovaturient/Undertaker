@@ -39,7 +39,7 @@ export default function App() {
           <img src="/public/logo.svg" alt="logo" className="w-12 h-12" />
           <div>
             <h1 className="text-2xl font-bold">Undertaker</h1>
-            <p className="text-sm text-slate-600">Hedera-native cross-chain AMM + CCIP router demo</p>
+            <p className="text-sm text-slate-200">Hedera-native cross-chain AMM + CCIP router demo</p>
           </div>
         </div>
         <WalletConnector />

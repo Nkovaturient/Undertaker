@@ -1,0 +1,14 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="g" x1="0" x2="1">
+<stop offset="0" stop-color="#18b48f" />
+<stop offset="1" stop-color="#0f8f6c" />
+</linearGradient>
+</defs>
+<rect width="120" height="120" rx="20" fill="url(#g)" />
+<g fill="white" transform="translate(20,20)">
+<circle cx="20" cy="20" r="18" opacity="0.18" />
+<path d="M10 70 L60 20" stroke="white" stroke-width="6" stroke-linecap="round" />
+<text x="8" y="100" font-size="24" font-family="monospace">U</text>
+</g>
+</svg>
